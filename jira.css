@@ -1,0 +1,232 @@
+
+/***** Backlog Items *****/
+/* Change the background color of a story/task when complete */ 
+#ghx-backlog .ghx-issues .ghx-backlog-card.ghx-done,
+#ghx-backlog .ghx-issues .ghx-backlog-card.ghx-done .ghx-end{
+    background-color: #cfc !important;
+}
+#ghx-backlog .ghx-issues .ghx-backlog-card.ghx-done:hover,
+#ghx-backlog .ghx-issues .ghx-backlog-card.ghx-done:hover .ghx-end{
+    background-color: #9f9 !important;
+}
+#ghx-backlog .ghx-issues .ghx-backlog-card.ghx-done.ghx-selected,
+#ghx-backlog .ghx-issues .ghx-backlog-card.ghx-done.ghx-selected .ghx-end{
+    background-color: #afa !important;
+}
+#ghx-backlog .ghx-issues .ghx-backlog-card.ghx-done.ghx-selected:hover,
+#ghx-backlog .ghx-issues .ghx-backlog-card.ghx-done.ghx-selected:hover .ghx-end{
+    background-color: #7f7 !important;
+}
+
+/* Make the Epic labels smaller so we can read more of the issue titles */
+/* .ghx-end.ghx-items-container .ghx-label{
+    max-width: 100px;
+} */
+
+
+/***** Details Sidebar *****/
+/* --Sprint view only-- make the details section a bit wider */
+#ghx-work #ghx-detail-view {
+	width: 35%!important;
+}
+
+/***** Swimlanes ******/
+/* make the simlane headers smaller */
+.ghx-swimlane-header .ghx-heading {
+	margin: 0;
+}
+.ghx-swimlane-header .ghx-expander .ghx-iconfont {
+	margin: 0!important;
+}
+
+
+/* Make the status be a little colored circle instead */
+#ghx-pool .ghx-info .jira-issue-status-lozenge {
+    width: 10px !important;
+    max-width: 10px !important;
+    height: 10px !important;
+    border-radius: 10px !important;
+    overflow: hidden;
+    margin-right: 0.5em;
+    text-overflow: initial;
+    padding: 0 !important;
+}
+#ghx-pool .jira-issue-status-lozenge-green {
+    background-color: #14892c !important;
+}
+#ghx-pool .jira-issue-status-lozenge-yellow {
+    background-color: #f90 !important;
+    color: #f90 !important;
+}
+#ghx-pool .jira-issue-status-lozenge-blue-gray {
+    background-color: #bdf !important;
+    color: #bdf !important;
+}
+
+/* Set the background color for complete swimlanes */
+#ghx-pool .ghx-swimlane-header.ghx-done {
+    background-color: #cfc !important;
+}
+#ghx-pool .ghx-swimlane-header.ghx-done.ghx-selected {
+    background-color: #afa !important;
+}
+.ghx-swimlane-header:after,
+.ghx-swimlane-header.ghx-selected:after {
+ 	display: none;   
+}
+
+/* flagged swimlanes background color */
+#ghx-pool .ghx-swimlane-header.ghx-flagged {
+    background-color: #FFF0B3 !important;
+}
+#ghx-pool .ghx-swimlane-header.ghx-flagged.ghx-selected {
+    background-color: #FFE380 !important;
+}
+
+/* flagged swimlanes flag icon instead of "lozenge" */
+#ghx-pool .ghx-swimlane-header.ghx-flagged .ghx-summary .aui-lozenge {
+    background: url(https://espial.atlassian.net/images/icons/emoticons/flag.png);
+    color: transparent;
+    display: inline-block;
+    overflow: hidden;
+    width: 16px;
+    height: 16px;
+    border: none;
+}
+
+/* resize move to done button */
+body:not(.adg3) .ghx-swimlane-header .ghx-bandaid button {
+    margin-top: 1px;
+    padding: 0 5px;
+    height: 1.4em;
+}
+body:not(.adg3) .ghx-column-headers .ghx-column {
+    border-bottom: 0;
+}
+.ghx-swimlane-header {
+    margin-right: 0;
+}
+
+
+/***** Sprint view cards *****/
+/* Move the icons to the right side of a task instead of an extra row at the bottom */
+.ghx-issue {
+    display: flex;
+    min-height: 29px;
+}
+.ghx-summary {
+    min-width: 50%;
+    display: inline-block !important;
+    flex: 6;
+}
+.ghx-issue .ghx-stat-fields{
+	display: flex;
+}
+.ghx-narrow-card .ghx-issue .ghx-stat-fields > .ghx-row {
+	width: auto !important;
+}
+.ghx-issue .ghx-stat-fields * {
+	display: inline-block!important;
+}
+.ghx-issue .ghx-stat-fields .ghx-row.ghx-stat-2 > .ghx-field {
+	display: none!important;
+}
+.ghx-parent-group {
+	margin: 0;
+}
+.ghx-issue .ghx-stat-fields > .ghx-row.ghx-stat-1 {
+	margin: 0;
+}
+
+/* only show assignee and story points icons */
+.ghx-subtask-group .ghx-field.ghx-field-icon{
+	display:none!important;
+}
+.ghx-highlighted-field,
+.ghx-grabber,
+.ghx-move-count,
+.ghx-extra-fields {
+    display:none;
+}
+.ghx-stat-fields > .ghx-stat-1 > span[data-tooltip],
+.ghx-stat-fields > .ghx-stat-1 > span > div {
+    display: none !important;
+}
+/* .ghx-label-version {
+    display: none;
+} */
+
+/* Card Task ID 1: Don't show the task ID */
+/* .ghx-issue .ghx-stat-fields .ghx-row.ghx-stat-2 {
+    display: none !important;
+} */
+
+/* Card Task ID 2: Show only the task number, not the full id */
+/* .ghx-issue .ghx-stat-fields .ghx-row.ghx-stat-2 a .ghx-issuekey-pkey.js-key-link {
+    display: none !important;
+} */
+/* Card Task ID 3: Show task id in bottom corner */
+.ghx-issue .ghx-stat-fields .ghx-row.ghx-stat-2 {
+    position: absolute;
+    bottom: -12px;
+    right: -2px;
+}
+
+
+/***** Headers *****/
+
+/* Compact headers 1: Quick filters on 2nd row */
+/* #ghx-operations {
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+#ghx-header {
+    min-height: 68px;
+    box-sizing: content-box;
+}
+#ghx-header #breadcrumbs-container {
+    float: left;
+    margin-top: 16px;
+}
+#ghx-header .ghx-top-header {
+    margin-top: 0.5em;
+} */
+
+
+/* Compact headers 2: Quick filters beside actions (not good with lots of filters) */
+#ghx-operations {
+    position: absolute;
+    top: -40px;
+    right: 175px;
+}
+#ghx-header {
+    min-height: 30px;
+    padding: 0 !important;
+    box-sizing: content-box;
+}
+#ghx-header #breadcrumbs-container {
+    float: left;
+    margin-top: 16px;
+}
+#ghx-header .ghx-top-header {
+    margin-top: 0.5em;
+}
+.ghx-sprint-goal {
+    display:none !important;
+}
+.ghx-sprint-meta .time {
+    display: none !important;
+}
+.ghx-mode-planning #ghx-operations {
+    right: 40px;
+    top: -40px;
+}
+
+.hMGPhr {
+    height: 134px;
+}
+
+[aria-label=Notifications] {
+    display: none;
+}

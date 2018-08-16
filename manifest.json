@@ -1,0 +1,12 @@
+ {
+     "manifest_version":2,
+     "version":"1.0",
+     "name": "Nicer Jira",
+     "content_scripts": [
+         {
+             "css": ["jira.css"],
+             "matches": ["https://espial.atlassian.net/*", "http://espial.atlassian.net/*"],
+             "exclude_globs": ["https://espial.atlassian.net/wiki/*", "http://espial.atlassian.net/wiki/*"]
+         }
+     ]
+ }
