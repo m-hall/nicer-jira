@@ -12,7 +12,7 @@ Makes Jira interface a bit nicer
 6. Pick the folder where this repository is saved
 
 ## Features
-- Highligh done stories in green
+- Highlight done stories in green
 - Save a bunch of space at the top of a sprint view
 - Save space on the task cards in the sprint view
 - Make the Status lozenges be little dots instead on task/story swimlanes
